@@ -9,8 +9,9 @@
 </head>
 <body>
     <section>
+        <div class="circle primary-color"></div>
         <header>
-            <a href="#"><img  class="logo" src="./img/logo.png" alt="logo"></a>
+            <a href="#"><img class="logo" src="./img/logo.png" alt="logo"></a>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
@@ -20,19 +21,41 @@
         </header>
         <div class="content">
             <div class="text-box">
-                <h2>It's not just Coffe<br>It's <span>Starbucks</span></h2> 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure animi, assumenda voluptate nisi suscipit tempore quod. Iusto quae ducimus consectetur sit? Nisi quasi fugiat rerum maxime assumenda officia natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure animi, assumenda voluptate nisi suscipit tempore quod. Iusto quae ducimus consectetur sit? Nisi quasi fugiat rerum maxime assumenda officia natus.
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-                    <div class="img-box">
-                        <img src="./img/img1.png" class="starbucks"  alt="coffe">
-                    </div>
+                <h2>It's not just Coffe<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure animi, assumenda voluptate nisi
+                    suscipit tempore quod. Iusto quae ducimus consectetur sit? Nisi quasi fugiat rerum maxime assumenda
+                    officia natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iure animi, assumenda
+                    voluptate nisi suscipit tempore quod. Iusto quae ducimus consectetur sit? Nisi quasi fugiat rerum
+                    maxime assumenda officia natus.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="img-box">
+                <img src="./img/img1.png" class="starbucks" alt="coffe">
+            </div>
         </div>
+        <ul class="thumb">
+            <li><img src="./img/thumb1.png" onclick="imgSlider('./img/img1.png');changePrimaryColor('#017143')" alt="coffe"></li>
+            <li><img src="./img/thumb2.png" onclick="imgSlider('./img/img2.png');changePrimaryColor('#ed7495')" alt="coffe"></li>
+            <li><img src="./img/thumb3.png" onclick="imgSlider('./img/img3.png');changePrimaryColor('#d752b1')" alt="coffe"></li>
+        </ul>
+        <ul class="social">
+            <li><a href="#"><img src="./icon/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="./icon/instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="./icon/twitter.png" alt=""></a></li>
+        </ul>
     </section>
 
 
     <!-- ad js -->
-    <script href="./main.js" ></script>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changePrimaryColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
 </body>
 </html>
