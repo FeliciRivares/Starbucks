@@ -43,7 +43,7 @@ header{
 }
 header .logo{
     position: relative;
-    max-width:80px ;
+    max-width: 80px ;
 
 }
 header ul{
@@ -146,4 +146,91 @@ header ul li a{
     height: 100%;
     background: var(--primary-color);
     clip-path: circle(600px at right 800px);
+}
+/*================ adaptive =========== */
+@media screen and (max-width: 991px){
+    header{
+        padding: 20px;
+    }
+    header .logo{
+        max-width: 60px;
+    }
+    header ul {
+        display: none;
+    }
+    header ul li a {
+        font-size: 1.5em;
+        margin: 5px 0 ;
+    }
+    section{
+        padding: 20px 20px 120px;
+    }
+    .content{
+        flex-direction:column ;
+        margin-top: 100px;
+    }
+    .content .text-box h2{
+        font-size:2.5em;
+        margin-bottom: 15px;
+       
+    }
+    .content .text-box {
+        max-width: 100%;
+    }
+    .circle{
+        clip-path: circle(400px at center bottom);
+    }
+    .img-box{
+        max-width: 100%;
+        justify-content: center;
+    }
+    .img-box img{
+        max-width: 300px;
+    }
+    .thumb li img{
+        max-width: 40px;
+    }
+    .social{
+        background:var(--primary-color);
+        right: 0px;
+        width: 50px;
+        border-radius: 15px 0 0 15px;
+    }
+    .social li img{
+        max-height: 20px;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(./icon/menu.png);
+        background-size:30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+    .toggle.active{
+        position: fixed;
+        right: 20px;
+        background: url(./icon/close.png);
+        background-size:30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+    }
+    header ul.navigation.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        background:#fff;
+        z-index: 10;
+    }
 }
